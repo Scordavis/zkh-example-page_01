@@ -1,0 +1,442 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	// font-weight: $defolt-weight
+	counter-reset: section
+	input, textarea
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+b, strong
+	font-weight: bold
+
+.font-weight-medium
+	font-weight: 500
+
+
+// custom classes
+.bx-wrapper
+	margin-top:  1px
+
+
+#subj-pages-block
+	display: none
+	width: 70%
+	margin: 0 auto
+	background: rgba(255,255,255,0.6)
+	padding-bottom: 20px
+
+
+
+#name
+	color: brown
+	font-weight: bolder
+
+
+#one-comment
+	width: 100%
+	padding: 10px
+	margin-bottom: 10px
+	background: #fff
+
+#comment
+	padding: 10px
+
+#open-form a
+	color: blue
+	font-weight: bolder
+	cursor: pointer
+	padding: 20px
+
+
+#open-form a
+	&:hover
+		color: red
+		font-weight: bolder
+
+#error-comment
+	font-weight: bolder
+	color: red
+// reset-links
+.reset-link
+	color: inherit
+	&:hover,&:active,&:focus
+		color: inherit
+		outline: none
+		text-decoration: none
+
+// button outline reset
+button
+	outline: none
+	background-color: transparent
+	border: 0
+	cursor: pointer
+	&:hover
+		outline: none
+	&:focus
+		outline: none
+	&:active
+		outline: none
+	&:visited
+		outline: none
+		cursor: pointer
+
+// @include transition(.2s)
+
+
+// Serega, zameni stili dlja knopok v osnovnom faile na eti
+.button
+	&--red
+		background-color: $danger
+		color: white
+		border: 1px solid white
+		cursor: pointer
+		@include transition(.2s)
+		&:hover
+			background-color: white
+			border-color: $danger
+			color: $danger
+
+	&--blue
+		background-color: $accent
+		color: white
+		border: 1px solid white
+		@include transition(.2s)
+		cursor: pointer
+		&:hover
+			background-color: white
+			border-color: $accent
+			color: $accent
+		&.active
+			background-color: white
+			border-color: $accent
+			color: $accent
+
+	&--white
+		background-color: white
+		color: $accent
+		border: 1px solid white
+		@include transition(.2s)
+		cursor: pointer
+		&:hover
+			background-color: darken(white, 8%)
+			border-color: white
+			color: $accent
+		&.active
+			background-color: white
+			border-color: white
+			color: $accent
+
+	&--normal
+		width: auto
+
+	&--rounded
+		border-radius: 2px
+
+	&--100
+		width: 100%
+
+// .header-page
+.header-page
+	position: relative
+	min-height: 70px
+	color: white
+	font-size: 18px
+	z-index: 8
+	&__wrapper
+	&__item
+		&--logo
+			max-width: 60px
+
+	&__icon
+	&__emergency
+		@include transition(.3s)
+	&__text
+		font-size: 18px
+		text-transform: uppercase
+		&--bigger
+			font-weight: bold
+		&--logo-title
+			font-size: 24px
+			font-weight: bold
+			line-height: 1.2
+		&--logo-description
+			text-transform: lowercase
+			font-weight: normal
+
+// .navbar
+.navbar
+	min-height: 80px
+	height: 80px
+	&__container
+		align-self: stretch
+
+	&__background-image
+		background-size: cover
+		background-position: 0 center
+		background-repeat: no-repeat
+		opacity: .5
+	&__wrapper
+		text-transform: uppercase
+		font-weight: bold
+	&__item
+		list-style-position: inside
+		list-style-type: none
+		a
+			&:hover
+				text-decoration: none
+	// dropdown
+	&-dropdown
+		max-width: 250px
+		background-color: white
+		list-style-position: inside
+		list-style-type: none
+		&--item
+
+.nav-dropdown
+	position: relative
+	width: 100%
+
+	&__button
+		font-weight: bold
+		text-transform: uppercase
+		list-style-position: inside
+		list-style-type: none
+		text-shadow: white -1px -1px 9px, white 1px 1px 9px, white 1px 0 9px,	white 0 1px 9px, white -2px -2px 9px, white 2px 2px 9px, white 2px 0 9px, white 0 2px 9px
+		opacity: 1
+		@include transition(.2s)
+		&:hover
+			text-decoration: none
+			opacity: .7
+
+	&__content
+		display: none
+		position: absolute
+		width: 100%
+		min-width: 300px
+		left: 0
+		right: 0
+		padding-left: 15px
+		padding-right: 15px
+		background-color: $accent
+		box-shadow: 0px 2px 8px fade-out($text, .4)
+		z-index: 6
+		&--mobile
+			position: relative
+
+		&--form
+			min-width: 300px
+			background: transparent
+			box-shadow: none
+
+	&__item
+		position: relative
+		display: block
+		padding: 2px 6px
+		text-align: left
+		@include transition(.2s)
+		&:after
+			position: absolute
+			top: 0
+			right: 10px
+			display: block
+			content: '\226B'
+			opacity: 0
+			@include transition(.2s)
+		&:hover
+			text-decoration: none
+			&:after
+				right: 0
+				opacity: 1
+
+// .hamburger
+.hamburger
+	position: relative
+	width: 40px
+	height: 40px
+	border-width: 3px
+	border-style: solid
+	border-radius: 40px
+	z-index: 2
+	opacity: 1
+	cursor: pointer
+	&:hover
+		opacity: .8
+	&:focus
+		opacity: .8
+
+	&__wrapper
+		border-width: 2px
+		border-style: solid
+		border-radius: 100%
+
+	&__img
+	&__bar
+		display: block
+		width: 22px
+		height: 2px
+		border-radius: 1px
+
+.nav
+	&__item
+		&--mobile
+	&__link
+		&--mobile
+	&__link-wrapper
+		z-index: 10
+		&--mobile
+			display: none
+	&-show
+		display: block
+// .logo-company
+.logo-company
+	position: relative
+	background-color: white
+	z-index: 2
+	&:after
+		position: absolute
+		display: block
+		content: ''
+		height: 360px
+		width: 360px
+		right: -220px
+		background-color: inherit
+		transform: rotate(25deg)
+		z-index: 1
+	&__self
+		z-index: 10
+
+// .slider
+.slider
+	&__wrapper
+		position: relative
+		height: 300px
+		z-index: 4
+.slide
+	&__text
+	&__text-heading
+		height: 80px
+		font-size: 16px
+		&--smaller
+
+	&__text-description
+		&--bigger
+			font-size: 20px
+			font-weight: bold
+
+// .news
+.news
+	&__heading
+	&__card
+		display: block
+		width: 270px
+		height: auto
+
+	&__img
+		position: relative
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		display: block
+		height: 180px
+		background-image: url(../img/placeholder.png)
+		background-size: cover
+		background-position: center
+		box-shadow: 0 0px 0px lighten(black, 40%)
+		cursor: pointer
+		@include transition(.3s)
+		&:hover
+			box-shadow: 0 4px 20px lighten(black, 40%)
+
+	&__title
+		font-size: 18px
+
+	&__description
+	&__attribute
+		&--time
+			&:before
+				content: attr(data-publication)
+
+		&--views
+			&:before
+				content: attr(data-popularity)
+				margin-right: 4px
+
+// .important-sections
+.important-sections
+	&:hover
+		text-decoration: none
+
+	&__card
+		width: 280px
+		box-shadow: 0 0px 0px lighten(black, 40%)
+		cursor: pointer
+		@include transition(.3s)
+		&:hover
+			box-shadow: 0 4px 20px lighten(black, 40%)
+
+	&__img
+		font-size: 48px
+
+	&__text
+		font-size: 13px
+
+// .footer-page
+.footer-page
+	&__item
+	&__text
+		font-size: 18px
+	&__nav
+		list-style-type: none
+
+
+	&__li
+		&:before
+			position: relative
+			content: '-'
+			top: 4px
+			display: inline-block
+			margin-right: 4px
+			font-size: 200%
+			line-height: 0
+
+
+	&__link
+		&:hover
+			opacity: .7
+
+	&__copyright
+		font-size: 13px
+		font-weight: light
+
+
+
+
+
+
+
+
+
+
+
+@import "media" // Always at the end
