@@ -13,90 +13,94 @@
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="css/slider.css">
 	<link rel="stylesheet" href="css/modal.css">
 	<link rel="stylesheet" href="css/main.css">
 	<style>
-	/*slider pagination*/
-	.slider-pagi__elem{
-		background-color: #ffffff;
-		border-color: #ffffff;
-	}
-	.slider-pagi__elem:before{
-		background: #fff;
+		/*slider pagination*/
+		.slider-pagi__elem{
+			background-color: #ffffff;
+			border-color: #ffffff;
+		}
+		.slider-pagi__elem:before{
+			background: #fff;
 
-	}
-	.slider-pagi__elem.active:before,
-	.slider-pagi__elem:hover:before {
-		width: 18px;
-		height: 18px;
-		border-width: 4px;
-		border-style: solid;
-		border-color: #24f395;
-	}
-	/*.theme-colors*/
-	.theme__text--accent {
-		color: #24f395;
-	}
-	.theme__text--danger {
-		color: #f33924;
-	}
-	.theme__text--normal {
-		color: #cecece;
-	}
-	.theme__text--dark {
-		color: #555555;
-	}
-	.theme__text--light {
-		color: #ffffff;
-	}
-	.theme__bg--accent {
-		background-color: #243cf3;
-	}
-	.theme__bg--danger {
-		background-color: #f33924;
-	}
-	.theme__bg--normal {
-		background-color: #cecece;
-	}
-	.theme__bg--dark {
-		background-color: #555555;
-	}
-	.theme__bg--light {
-		background-color: #ffffff;
-	}
-	.theme__rad--accent {
-		border-color: #243cf3;
-	}
-	.theme__rad--danger {
-		border-color: #f33924;
-	}
-	.theme__rad--normal {
-		border-color: #cecece;
-	}
-	.theme__rad--dark {
-		border-color: #555555;
-	}
-	.theme__rad--light {
-		border-color: #ffffff;
-	}
-	/*slick arrows*/
-	.slick-prev, .slick-next {
-		color: grey;
-		background: transparent;
-	}
-	.slick-prev:before, .slick-next:before {
-		font-size: 20px;
-		line-height: 1;
-		opacity: .75;
-		color: gray;
+		}
+		.slider-pagi__elem.active:before,
+		.slider-pagi__elem:hover:before {
+			width: 18px;
+			height: 18px;
+			border-width: 4px;
+			border-style: solid;
+			border-color: #24f395;
+		}
+		/*.theme-colors*/
+		.theme__text--accent {
+			color: #edb636;
+		}
+		.theme__text--danger {
+			color: #f33924;
+		}
+		.theme__text--normal {
+			color: #cecece;
+		}
+		.theme__text--dark {
+			color: #555555;
+		}
+		.theme__text--light {
+			color: #ffffff;
+		}
+		.theme__bg--accent {
+			background-color: #edb636;
+		}
+		.theme__bg--danger {
+			background-color: #f33924;
+		}
+		.theme__bg--normal {
+			background-color: #cecece;
+		}
+		.theme__bg--dark {
+			background-color: #555555;
+		}
+		.theme__bg--black {
+			background-color: #000000;
+		}
+		.theme__bg--light {
+			background-color: #ffffff;
+		}
+		.theme__rad--accent {
+			border-color: #243cf3;
+		}
+		.theme__rad--danger {
+			border-color: #f33924;
+		}
+		.theme__rad--normal {
+			border-color: #cecece;
+		}
+		.theme__rad--dark {
+			border-color: #555555;
+		}
+		.theme__rad--light {
+			border-color: #ffffff;
+		}
+		/*slick arrows*/
+		.slick-prev, .slick-next {
+			color: grey;
+			background: transparent;
+		}
+		.slick-prev:before, .slick-next:before {
+			font-size: 20px;
+			line-height: 1;
+			opacity: .75;
+			color: gray;
 	</style>
 </head>
 <body>
 	<!-- header-page -->
-	<header class="container-fluid header-page header-page header-page--opacity-25 theme__bg--dark" style="background-image: url(img/bg-header-top.jpg);">
+	<header class="container-fluid header-page theme__bg--black" >
+		<div class="header-page__bg header-page__bg--opacity-25" style="background-image: url(img/bg-header-top.jpg);"></div>
 		<div class="row h-100 align-items-center px-3 py-2">
 			<!-- header-page__item location-->
 			<div class="col-lg col-md-4 col-sm-12 header-page__item text-center text-md-left">
@@ -110,9 +114,9 @@
 			</div>
 			<!-- header-page__item emergency -->
 			<div class="col-xl-4 col-lg-3 col-md-4 header-page__item text-center text-md-left">
-				<i class="mr-1 fa fa-exclamation-triangle header-page__icon theme__text--danger"></i>
+				<i class="mr-1 fa fa-exclamation-triangle header-page__icon theme__text--accent"></i>
 				<p class="d-inline mr-2 header-page__text header-page__text--bigger theme__text--light">032-44-31-08</p>
-				<p class="d-xl-inline d-lg-block mb-0  header-page__text header-page__text--bigger"><a href="#emergencyWindow" data-fancybox class="header-page__emergency reset-link theme__text--danger">аварійна служба</a></p>
+				<p class="d-xl-inline d-lg-block mb-0  header-page__text header-page__text--bigger"><a href="#emergencyWindow" data-fancybox class="header-page__emergency reset-link theme__text--accent">аварійна служба</a></p>
 			</div>
 			<!-- header-page__item godfather logo -->
 			<div class="d-none d-sm-block col-lg-3 col-md-12 text-right header-page__item text-center text-md-left">
@@ -134,7 +138,7 @@
 		</div>
 		<div class="container-fluid navbar__container h-100">
 			<div class="d-flex col-9 col-sm-6 col-md-7 col-lg-3 h-100 align-items-center logo-company">
-				<img src="img/logo-company.jpg" class="img-fluid logo-company__self" alt="">
+				<img src="img/logo-company.png" class="img-fluid logo-company__self" alt="">
 			</div>
 			<!-- site nav buttons desctop-->
 			<div class="col-lg-8 h-100 d-none d-lg-block col-7 col-xl-7 col-lg-6 col-md-4 nav__link-wrapper">
