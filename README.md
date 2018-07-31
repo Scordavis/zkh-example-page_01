@@ -1,2 +1,1 @@
-# zkh-typical-page
-Типовая страница (главная)
+# zkh-example-page_01
