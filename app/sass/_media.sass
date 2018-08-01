@@ -1,0 +1,112 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@media (max-width: 1199.98px)
+	body
+		font-size: 14px
+	.header-page
+		&__wrapper
+		&__item
+			&--logo
+
+		&__icon
+		&__emergency
+		&__text
+			&--bigger
+			&--logo-title
+				font-size: 20px
+				line-height: 1.2
+			&--logo-description
+				font-size: 14px
+	// .logo-company
+	.logo-company
+		&:after
+			right: -60px
+	.slide
+		&__overlay
+
+	// .news
+	.news
+		&__heading
+		&__card
+			width: auto
+
+	.important-sections
+		&__card
+			width: auto
+
+	.footer-page
+		&__text
+			&--responsive
+				font-size: 1.3vw
+
+// ≥992px
+@media (max-width: 991.98px)
+	.logo-company
+		&:after
+			display: none
+
+	.navbar
+		&__background-image
+			display: none
+
+	.footer-page
+		&__text
+			&--responsive
+				font-size: inherit
+
+// ≥768px
+@media (max-width: 767.98px)
+	.emergency-service
+		&__table-header
+			display: none
+		&__phone
+	.emergency-service tbody .emergency-service__table-data
+		display: block
+		&:first-child
+			background-color: darken(white, 47%)
+			color: white
+		&:before
+			content: attr(data-js-table)
+			font-weight: bold
+			display: block
+			text-align: center
+			width: 100%
+	.slide
+		&__text-heading
+			height: 14vw
+			line-height: 1.4
+
+// ≥576px
+@media (max-width: 575.98px)
+	.emergency-service
+		&__table-header
+			display: none
+		&__phone
+	.emergency-service tbody .emergency-service__table-data
+		display: block
+		&:first-child
+			background-color: darken(white, 47%)
+			color: white
+		&:before
+			content: attr(data-js-table)
+			font-weight: bold
+			display: block
+			text-align: center
+			width: 100%
+	.slide
+		&__text-heading
+			height: 17vw
+			line-height: 1.2
+
+
+
+
+
+
+
+
+

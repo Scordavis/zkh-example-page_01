@@ -13,34 +13,30 @@
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-	<link rel="stylesheet" href="css/slider.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 	<link rel="stylesheet" href="css/modal.css">
 	<link rel="stylesheet" href="css/main.css">
 	<style>
-		/*slider pagination*/
-		.slider-pagi__elem{
+		/*theme customize*/
+		/*fancybox color layout*/
+		.fancybox-content {
+			background-color: unset;
+		}
+		/*slider*/
+		/*pagination*/
+		.slick-dots li button:before {
 			background-color: #ffffff;
-			border-color: #ffffff;
 		}
-		.slider-pagi__elem:before{
-			background: #fff;
+		.slick-dots li.slick-active button:before {
+			box-shadow: 0px 0px 0px 4px #daa520;
+		}
 
-		}
-		.slider-pagi__elem.active:before,
-		.slider-pagi__elem:hover:before {
-			width: 18px;
-			height: 18px;
-			border-width: 4px;
-			border-style: solid;
-			border-color: #24f395;
-		}
 		/*.theme-colors*/
 		.theme__text--accent {
-			color: #edb636;
+			color: #24f395;
 		}
 		.theme__text--danger {
 			color: #f33924;
@@ -55,7 +51,7 @@
 			color: #ffffff;
 		}
 		.theme__bg--accent {
-			background-color: #edb636;
+			background-color: #243cf3;
 		}
 		.theme__bg--danger {
 			background-color: #f33924;
@@ -65,9 +61,6 @@
 		}
 		.theme__bg--dark {
 			background-color: #555555;
-		}
-		.theme__bg--black {
-			background-color: #000000;
 		}
 		.theme__bg--light {
 			background-color: #ffffff;
@@ -87,26 +80,11 @@
 		.theme__rad--light {
 			border-color: #ffffff;
 		}
-		/*slick arrows*/
-		.slick-prev, .slick-next {
-			color: grey;
-			background: transparent;
-		}
-		.slick-prev:before, .slick-next:before {
-			font-size: 20px;
-			line-height: 1;
-			opacity: .75;
-			color: gray;
 	</style>
 </head>
 <body>
 	<!-- header-page -->
-<<<<<<< HEAD
-	<header class="container-fluid header-page theme__bg--black" >
-		<div class="header-page__bg header-page__bg--opacity-25" style="background-image: url(img/bg-header-top.jpg);"></div>
-=======
 	<header class="container-fluid header-page theme__bg--dark" style="background-image: url(img/bg-abstract.png);">
->>>>>>> parent of 940d5a1... speedup
 		<div class="row h-100 align-items-center px-3 py-2">
 			<!-- header-page__item location-->
 			<div class="col-lg col-md-4 col-sm-12 header-page__item text-center text-md-left">
@@ -120,9 +98,9 @@
 			</div>
 			<!-- header-page__item emergency -->
 			<div class="col-xl-4 col-lg-3 col-md-4 header-page__item text-center text-md-left">
-				<i class="mr-1 fa fa-exclamation-triangle header-page__icon theme__text--accent"></i>
+				<i class="mr-1 fa fa-exclamation-triangle header-page__icon theme__text--danger"></i>
 				<p class="d-inline mr-2 header-page__text header-page__text--bigger theme__text--light">032-44-31-08</p>
-				<p class="d-xl-inline d-lg-block mb-0  header-page__text header-page__text--bigger"><a href="#emergencyWindow" data-fancybox class="header-page__emergency reset-link theme__text--accent">аварійна служба</a></p>
+				<p class="d-xl-inline d-lg-block mb-0  header-page__text header-page__text--bigger"><a href="#emergencyWindow" data-fancybox class="header-page__emergency reset-link theme__text--danger">аварійна служба</a></p>
 			</div>
 			<!-- header-page__item godfather logo -->
 			<div class="d-none d-sm-block col-lg-3 col-md-12 text-right header-page__item text-center text-md-left">
@@ -144,7 +122,7 @@
 		</div>
 		<div class="container-fluid navbar__container h-100">
 			<div class="d-flex col-9 col-sm-6 col-md-7 col-lg-3 h-100 align-items-center logo-company">
-				<img src="img/logo-company.png" class="img-fluid logo-company__self" alt="">
+				<img src="img/logo-company.jpg" class="img-fluid logo-company__self" alt="">
 			</div>
 			<!-- site nav buttons desctop-->
 			<div class="col-lg-8 h-100 d-none d-lg-block col-7 col-xl-7 col-lg-6 col-md-4 nav__link-wrapper">
@@ -267,83 +245,91 @@
 		</div>
 	</div>
 	<!-- slider -->
-	<div class="slider__wrapper">
-		<div class="h-100 slider-container">
-			<div class="slider-control left inactive">
-			</div>
-			<div class="slider-control right">
-			</div>
-			<ul class="slider-pagi"></ul>
-			<div class="h-100 slider">
-				<!-- slide active -->
-				<div class="slide slide-0 active">
-					<div class="slide__bg" style="background-image: url(img/teplo2.jpg);">
+	<div class="w-100 slider">
+			<div class="h-100 mb-0 slider__wrapper" id="topSlider">
+				<!-- slide-->
+				<div class="position-relative slide">
+					<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/snow.jpg);">
 					</div>
 					<div class="slide__content">
-						<svg class="slide__overlay" viewbox="-40 0 1920 405" preserveaspectratio="xMaxYMax slice">
+						<!-- visible overlay  on desctop -->
+						<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
 							<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
 						</svg>
-						<div class="container h-100">
+						<!-- visible overlay  on handler -->
+						<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
+							<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
+						</svg>
+						<div class="container-fluid h-100">
 							<div class="row h-100">
-								<div class="offset-lg-6 col-lg-6 h-100 py-4 slide__text">
-									<h2 class="mb-3 text-uppercase slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
-									<p class="mb-0 slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
-									<p class="mb-0 slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0</span>осіб</p>
-									<p class="mb-0 slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
+								<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
+									<h2 class="mb-2 pt-3 text-uppercase text-center text-lg-left slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
+									<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
+									<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0 осіб</p>
+									<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- slide -->
-				<div class="slide slide-1">
-					<div class="slide__bg" style="background-image: url(img/snow.jpg);">
+				<!-- slide-->
+				<div class="position-relative slide">
+					<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/water.jpg);">
 					</div>
 					<div class="slide__content">
-						<svg class="slide__overlay" viewbox="-40 0 1920 405" preserveaspectratio="xMaxYMax slice">
-							<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: red"/>
+						<!-- visible overlay  on desctop -->
+						<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
+							<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
 						</svg>
-						<div class="container h-100">
+						<!-- visible overlay  on handler -->
+						<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
+							<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
+						</svg>
+						<div class="container-fluid h-100">
 							<div class="row h-100">
-								<div class="offset-lg-6 col-lg-6 h-100 py-4 slide__text">
-									<h2 class="mb-3 slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
-									<p class="mb-0 slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 slide__text-description--smaller">2017</span></p>
-									<p class="mb-0 slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--smaller">0</span>осіб</p>
-									<p class="mb-0 slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--smaller">1265</span></p>
+								<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
+									<h2 class="mb-2 pt-3 text-uppercase text-center text-lg-left slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
+									<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
+									<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0 осіб</p>
+									<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- slide -->
-				<div class="slide slide-2">
-					<div class="slide__bg" style="background-image: url(img/water.jpg);">
+				<!-- slide-->
+				<div class="position-relative slide">
+					<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/snow.jpg);">
 					</div>
 					<div class="slide__content">
-						<svg class="slide__overlay" viewbox="-40 0 1920 405" preserveaspectratio="xMaxYMax slice">
-							<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: red"/>
+						<!-- visible overlay  on desctop -->
+						<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
+							<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
 						</svg>
-						<div class="container h-100">
+						<!-- visible overlay  on handler -->
+						<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
+							<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
+						</svg>
+						<div class="container-fluid h-100">
 							<div class="row h-100">
-								<div class="offset-lg-6 col-lg-6 h-100 py-4 slide__text">
-									<h2 class="mb-3 slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
-									<p class="mb-0 slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 slide__text-description--smaller">2017</span></p>
-									<p class="mb-0 slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--smaller">0</span>осіб</p>
-									<p class="mb-0 slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--smaller">1265</span></p>
+								<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
+									<h2 class="mb-2 pt-3 text-uppercase text-center text-lg-left slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
+									<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
+									<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0 осіб</p>
+									<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</div>
 	<!-- news-block -->
 	<div class="container-fluid mb-5 pt-5 theme__bg--light">
 		<h2 class="mb-5 text-center text-uppercase font-weight-bold theme__text--dark">Новини</h2>
-		<div class="row js-news">
+		<div class="js-news">
 			<!-- news__card -->
-			<div class="col-lg-3 col-md-6 col-12 mb-4">
+			<div class="px-2 mb-4">
 				<div class="m-auto news__card">
 					<a href="#" class="d-block mb-2 news__img theme__bg--normal" style="background-image: url(img/snow.jpg);"></a>
 					<div class="row">
@@ -360,7 +346,7 @@
 				</div>
 			</div>
 			<!-- news__card -->
-			<div class="col-lg-3 col-md-6 col-12 mb-4">
+			<div class="px-2 mb-4">
 				<div class="m-auto news__card">
 					<a href="#" class="d-block mb-2 news__img theme__bg--normal" style="background-image: url(img/gmail_confi.jpg);"></a>
 					<div class="row">
@@ -377,7 +363,7 @@
 				</div>
 			</div>
 			<!-- news__card -->
-			<div class="col-lg-3 col-md-6 col-12 mb-4">
+			<div class="px-2 mb-4">
 				<div class="m-auto news__card">
 					<a href="#" class="d-block mb-2 news__img theme__bg--normal" style="background-image: url(img/placeholder-red.png);"></a>
 					<div class="row">
@@ -394,13 +380,30 @@
 				</div>
 			</div>
 			<!-- news__card -->
-			<div class="col-lg-3 col-md-6 col-12 mb-4">
+			<div class="px-2 mb-4">
 				<div class="m-auto news__card">
 					<a href="#" class="d-block mb-2 news__img theme__bg--normal" style="background-image: url(img/maxresdefault.jpg);"></a>
 					<div class="row">
 						<!-- news attributes -->
 						<div class="col news__attribute">
 							<i class="d-inline mr-2 fa fa-clock-o theme__text--accent"></i><small class="news__attribute--time" data-publication="25.01.2017"></small>
+						</div>
+						<div class="col news__attribute">
+							<i class="d-inline mr-2 fa fa-eye theme__text--accent"></i><small class="news__attribute--views" data-popularity="8">просмотров</small>
+						</div>
+					</div>
+					<p class="mt-1 mb-0 news__title font-weight-bold">Заголовок новини</p>
+					<p class="mb-0 news__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+				</div>
+			</div>
+			<!-- news__card -->
+			<div class="px-2 mb-4">
+				<div class="m-auto news__card">
+					<a href="#" class="d-block mb-2 news__img theme__bg--normal" style="background-image: url(img/placeholder-red.png);"></a>
+					<div class="row">
+						<!-- news attributes -->
+						<div class="col news__attribute">
+							<i class="d-inline mr-2 fa fa-clock-o theme__text--accent"></i><small class="news__attribute--time" data-publication="04.12.2016"></small>
 						</div>
 						<div class="col news__attribute">
 							<i class="d-inline mr-2 fa fa-eye theme__text--accent"></i><small class="news__attribute--views" data-popularity="8">просмотров</small>
@@ -520,205 +523,246 @@
 			</div>
 		</div>
 	</footer>
-
-
 	<!-- emergencyWindow -->
-	<div class="container pt-0 emergency-service" id="emergencyWindow" style="display: none;">
-		<!-- header -->
-		<header class="row pt-3 pb-4 align-items-center emergency-service__header">
-			<div class="col-lg-4 col-md-6 col-sm-8 col-12">
-				<p class="mb-3 mb-md-0 text-sm-left text-center emergency-service__text font-weight-bold emergency-service__text--red">Аварійно-диспетчерська служба</p>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-4 col-12">
-				<img src="img/ico-phone.png" class="d-md-inline d-none mr-2 emergency-service__header-icon"><p class="d-md-inline d-block mr-1 text-sm-left text-center font-weight-bold emergency-service__phone">044 <small class="font-weight-normal">209 03 93</small></p>
-			</div>
-			<div class="col-12 mt-3">
-				<p class="text-sm-left text-center font-weight-bold emergency-service__text">Для подання заявки заповніть форму та дочекайтесь дзвінка оператора</p>
-			</div>
-		</header>
-		<!-- form -->
-		<form action="" class="row mb-4 py-4 emergency-service__form-wrapper">
-			<!-- street -->
-			<div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-3 emergency-service__form-input">
-				<div class="input-group">
-					<input type="text" class="p-3 w-100" id="streetInput" placeholder="Оберіть вулицю">
+	<div class="p-0" id="emergencyWindow" style="display: none;">
+		<div class="container pt-0 emergency-service theme__bg--light">
+			<!-- header -->
+			<header class="row pt-3 pb-4 align-items-center emergency-service__header">
+				<div class="col-lg-4 col-md-6 col-sm-7 col-12">
+					<p class="mb-3 mb-md-0 text-sm-left text-center emergency-service__text font-weight-bold emergency-service__text--red">Аварійно-диспетчерська служба</p>
 				</div>
-				<ul class="pl-0 emergency-service__form-list" style="display: none;">
-					<li class="px-3 py-2">Каземирская</li>
-					<li class="px-3 py-2">Причальная</li>
-					<li class="px-3 py-2">Ростовская</li>
-					<li class="px-3 py-2">Алая</li>
-				</ul>
-			</div>
-			<!-- house -->
-			<div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-3 emergency-service__form-input">
-				<div class="input-group">
-					<select class="p-3 custom-select" id="select-street">
-						<option selected>Номер будинку</option>
-						<option value="1">1</option>
-						<option value="2">1а</option>
-						<option value="3">1б</option>
-						<option value="4">2</option>
-						<option value="5">3</option>
-						<option value="6">3а</option>
-					</select>
+				<div class="col-lg-4 col-md-6 col-sm-5 col-12">
+					<img src="img/ico-phone.png" class="d-md-inline d-none mr-2 emergency-service__header-icon"><p class="d-md-inline d-block mr-1 text-sm-left text-center font-weight-bold emergency-service__phone">044 <small class="font-weight-normal">209 03 93</small></p>
 				</div>
-			</div>
-			<!-- apartment -->
-			<div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-3 emergency-service__form-input">
-				<div class="input-group">
-					<select class="p-3 custom-select" id="select-street">
-						<option selected>Номер квартири</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-					</select>
+				<div class="col-12 mt-3">
+					<p class="text-sm-left text-center font-weight-bold emergency-service__text">Для подання заявки заповніть форму та дочекайтесь дзвінка оператора</p>
 				</div>
-			</div>
-			<!-- phone number -->
-			<div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-3 emergency-service__form-input">
-				<div class="input-group">
-					<input class="p-3 border-0 w-100" type="text" placeholder="Номер вашого телефону">
-				</div>
-			</div>
-			<!-- damage -->
-			<div class="col-lg-8 col-md-8 col-sm-7 col-12 mb-3 emergency-service__form-input">
-				<div class="input-group">
-					<select class="p-3 custom-select" id="select-street">
-						<option selected>Оберіть вид пошкодження</option>
-						<option value="1">Поламана свістюлька</option>
-						<option value="2">Поламана кішка</option>
-						<option value="3">Не працює зять</option>
-						<option value="4">Долар по 27 гривень</option>
-						<option value="5">По телику одна маячня</option>
-						<option value="6">Чухається щось...</option>
-					</select>
-				</div>
-			</div>
-			<!-- submit -->
-			<div class="col-lg-3 col-md-4 col-sm-5 col-10 offset-1 offset-sm-0 mt-0 mt-lg-2 emergency-service__form-input">
-				<button type="submit" class="w-100 py-3 emergency-service__form-btn emergency-service__form-btn--red">Надіслати заявку<i class="pl-2 fa fa-angle-double-right"></i></button>
-			</div>
-		</form>
-		<p class="mb-1 text-sm-left text-center font-weight-bold emergency-service__text">Через декілька хвилин тут Ви зможете перевірити стан виконання Вашої заявки</p>
-		<p class="mb-3 text-sm-left text-center font-weight-bold emergency-service__text emergency-service__text--blue">Інформація про Вашу заявку</p>
-		<div class="row">
-			<!-- left side -->
-			<div class="col-12 col-lg-6 mb-2 claim">
-				<!-- wrapper dlja borderov v mobilnoj versii -->
-				<div class="mb-3 pb-2 claim__text-wrapper">
-					<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Ваша заявка:<span class="ml-1 font-weight-bold claim__text claim__text--blue" data-emergency-claim="number">№1234</span><span class="mx-3">/</span></p>
-					<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Дата/час:<span class="ml-1 font-weight-bold" data-emergency-claim="date">10.07.2018/22:57</span></p>
-				</div>
-				<!-- wrapper dlja borderov v mobilnoj versii -->
-				<div class="mb-3 pb-2 claim__text-wrapper">
-					<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Майстер:<span class="ml-1 font-weight-bold claim__text claim__text--blue" data-emergency-claim="master">Иванов Олександр</span><span class="mx-3">/</span></p>
-					<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Телефон:<span class="ml-1 font-weight-bold" data-emergency-claim="master-phone">095 258 28 44</span></p>
-				</div>
-				<!-- wrapper dlja borderov v mobilnoj versii -->
-				<div class="mb-3 pb-2 claim__text-wrapper">
-					<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Орієнтовний час прибуття бригади:<span class="ml-1 font-weight-bold claim__text claim__text--blue" data-emergency-claim="arrived">23:17</span></p>
-				</div>
-				<!-- wrapper dlja borderov v mobilnoj versii -->
-				<div class="mb-3 pb-2 claim__text-wrapper">
-					<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Оцінити роботу бригади:</p>
-					<div class="d-block d-sm-inline ml-2 text-sm-left text-center claim__rating" id="star-rating">
-						<input type="radio" name="example" class="rating" value="1" />
-						<input type="radio" name="example" class="rating" value="2" />
-						<input type="radio" name="example" class="rating" value="3" />
-						<input type="radio" name="example" class="rating" value="4" />
-						<input type="radio" name="example" class="rating" value="5" />
-					</div>
-				</div>
-			</div>
-			<!-- right side -->
-			<div class="col-12 col-lg-6 chat">
-				<form action="" class="w-100 mb-4">
+			</header>
+			<!-- form -->
+			<form action="" class="row mb-4 py-4 emergency-service__form-wrapper">
+				<!-- street -->
+				<div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-3 emergency-service__form-input">
 					<div class="input-group">
-						<input type="text" class="form-control py-3 chat__input" placeholder="Введіть повідомлення" aria-label="Recipient's username" aria-describedby="button-addon2">
-						<div class="input-group-append">
-							<button class="py-3 px-4 chat__button" type="button" id="button-chat"><img src="img/enter.svg" alt="" class="chat__button-img"></button>
-						</div>
+						<input type="text" class="p-3 w-100" id="streetInput" placeholder="Оберіть вулицю">
 					</div>
-				</form>
-				<div class="chat__window p-3">
-					<div class="chat__window-wrapper">
-						<!-- start message block -->
-						<div class="row mb-3 justify-content-start chat__message">
-							<p class="col mb-1 font-weight-bold chat__author" data-chat="author">Администратор</p>
-							<p class="col mb-0 text-center chat__date" data-chat="date">30.07.2018</p>
-							<p class="col-1 mb-0 text-center">&#47;</p>
-							<p class="col mb-0 text-center chat__time" data-chat="time">11:33:58</p>
-							<p class="col-12 chat__text" data-chat="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsam suscipit, quas id eius maiores corporis commodi dignissimos a natus?</p>
-						</div>
-						<!-- start message block -->
-						<div class="row mb-3 justify-content-start chat__message">
-							<p class="col mb-1 font-weight-bold chat__author" data-chat="author">Ви</p>
-							<p class="col mb-0 text-center chat__date" data-chat="date">30.06.2018</p>
-							<p class="col-1 mb-0 text-center">&#47;</p>
-							<p class="col mb-0 text-center chat__time" data-chat="time">12:47:12</p>
-							<p class="col-12 chat__text" data-chat="message">quas id eius maiores corporis commodi dignissimos a natus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsam suscipit, quas i</p>
+					<ul class="pl-0 emergency-service__form-list" style="display: none;">
+						<li class="px-3 py-2">Каземирская</li>
+						<li class="px-3 py-2">Причальная</li>
+						<li class="px-3 py-2">Ростовская</li>
+						<li class="px-3 py-2">Алая</li>
+					</ul>
+				</div>
+				<!-- house -->
+				<div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-3 emergency-service__form-input">
+					<div class="input-group">
+						<select class="p-3 custom-select" id="select-street">
+							<option selected>Номер будинку</option>
+							<option value="1">1</option>
+							<option value="2">1а</option>
+							<option value="3">1б</option>
+							<option value="4">2</option>
+							<option value="5">3</option>
+							<option value="6">3а</option>
+						</select>
+					</div>
+				</div>
+				<!-- apartment -->
+				<div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-3 emergency-service__form-input">
+					<div class="input-group">
+						<select class="p-3 custom-select" id="select-street">
+							<option selected>Номер квартири</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+						</select>
+					</div>
+				</div>
+				<!-- phone number -->
+				<div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-3 emergency-service__form-input">
+					<div class="input-group">
+						<input class="p-3 border-0 w-100" type="text" placeholder="Номер вашого телефону">
+					</div>
+				</div>
+				<!-- damage -->
+				<div class="col-lg-8 col-md-8 col-sm-7 col-12 mb-3 emergency-service__form-input">
+					<div class="input-group">
+						<select class="p-3 custom-select" id="select-street">
+							<option selected>Оберіть вид пошкодження</option>
+							<option value="1">Поламана свістюлька</option>
+							<option value="2">Поламана кішка</option>
+							<option value="3">Не працює зять</option>
+							<option value="4">Долар по 27 гривень</option>
+							<option value="5">По телику одна маячня</option>
+							<option value="6">Чухається щось...</option>
+						</select>
+					</div>
+				</div>
+				<!-- submit -->
+				<div class="col-lg-3 col-md-4 col-sm-5 col-10 offset-1 offset-sm-0 mt-0 mt-lg-2 emergency-service__form-input">
+					<button type="submit" class="w-100 py-3 emergency-service__form-btn emergency-service__form-btn--red">Надіслати заявку<i class="pl-2 fa fa-angle-double-right"></i></button>
+				</div>
+			</form>
+			<p class="mb-1 text-sm-left text-center font-weight-bold emergency-service__text">Через декілька хвилин тут Ви зможете перевірити стан виконання Вашої заявки</p>
+			<p class="mb-3 text-sm-left text-center font-weight-bold emergency-service__text emergency-service__text--blue">Інформація про Вашу заявку</p>
+			<div class="row">
+				<!-- left side -->
+				<div class="col-12 col-lg-6 mb-2 claim">
+					<!-- wrapper dlja borderov v mobilnoj versii -->
+					<div class="mb-3 pb-2 claim__text-wrapper">
+						<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Ваша заявка:<span class="ml-1 font-weight-bold claim__text claim__text--blue" data-emergency-claim="number">№1234</span><span class="mx-3">/</span></p>
+						<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Дата/час:<span class="ml-1 font-weight-bold" data-emergency-claim="date">10.07.2018/22:57</span></p>
+					</div>
+					<!-- wrapper dlja borderov v mobilnoj versii -->
+					<div class="mb-3 pb-2 claim__text-wrapper">
+						<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Майстер:<span class="ml-1 font-weight-bold claim__text claim__text--blue" data-emergency-claim="master">Иванов Олександр</span><span class="mx-3">/</span></p>
+						<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Телефон:<span class="ml-1 font-weight-bold" data-emergency-claim="master-phone">095 258 28 44</span></p>
+					</div>
+					<!-- wrapper dlja borderov v mobilnoj versii -->
+					<div class="mb-3 pb-2 claim__text-wrapper">
+						<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Орієнтовний час прибуття бригади:<span class="ml-1 font-weight-bold claim__text claim__text--blue" data-emergency-claim="arrived">23:17</span></p>
+					</div>
+					<!-- wrapper dlja borderov v mobilnoj versii -->
+					<div class="mb-3 pb-2 claim__text-wrapper">
+						<p class="d-block d-sm-inline text-sm-left text-center emergency-service__text claim__text">Оцінити роботу бригади:</p>
+						<div class="d-block d-sm-inline ml-2 text-sm-left text-center claim__rating" id="star-rating">
+							<input type="radio" name="example" class="rating" value="1" />
+							<input type="radio" name="example" class="rating" value="2" />
+							<input type="radio" name="example" class="rating" value="3" />
+							<input type="radio" name="example" class="rating" value="4" />
+							<input type="radio" name="example" class="rating" value="5" />
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-12 mb-3 pt-3 emergency-service__table-wrapper">
-				<p class="mb-3 font-weight-bold emergency-service__text">Заявки в роботі</p>
-				<table class="w-100 emergency-service__table js-table">
-					<!-- start table-header -->
-					<thead>
-						<tr class="row emergency-service__table-header">
-							<th class="col-12 col-sm-3 py-4 text-center font-weight-normal emergency-service__table-data">Дата/Час</th>
-							<th class="col-12 col-sm-3 py-4 text-center font-weight-normal emergency-service__table-data">Адреса</th>
-							<th class="col-12 col-sm-3 py-4 text-center font-weight-normal emergency-service__table-data">Категорія звернення</th>
-							<th class="col-12 col-sm-3 py-4 text-center font-weight-normal emergency-service__table-data">Статус</th>
-						</tr>
-					</thead>
-					<!-- end table-header -->
-					<tbody>
-						<!-- start row -->
-						<tr class="row emergency-service__table-row">
-							<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="date">10-07-2018 / 17:00:48</td>
-							<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="adress">Центральная, 57; Кв.15</td>
-							<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="damage">Сміття</td>
-							<td class="col-12 col-sm-3 py-3 text-center font-weight-bold emergency-service__table-data" data-emergency-table="completed">Закрита</td>
-						</tr>
-						<!-- end row -->
-						<!-- start row -->
-						<tr class="row emergency-service__table-row">
-							<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="date">10-07-2018 / 08:12:00</td>
-							<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="adress">Урицького, 47; Кв.98</td>
-							<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="damage">Холодне водопостачання</td>
-							<td class="col-12 col-sm-3 py-3 text-center font-weight-bold emergency-service__table-data" data-emergency-table="unchecked">Неперевірена</td>
-						</tr>
-						<!-- end row -->
-						<!-- start row -->
-						<tr class="row emergency-service__table-row">
-							<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="date">10-07-2018 / 00:37:12</td>
-							<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="adress">Київська, 130; Кв.202</td>
-							<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="damage">ліфт</td>
-							<td class="col-12 col-sm-3 py-3 text-center font-weight-bold emergency-service__table-data" data-emergency-table="inProgress">Незакрита</td>
-						</tr>
-						<!-- end row -->
-					</tbody>
-				</table>
+				<!-- right side -->
+				<div class="col-12 col-lg-6 chat">
+					<form action="" class="w-100 mb-4">
+						<div class="input-group">
+							<input type="text" class="form-control py-3 chat__input" placeholder="Введіть повідомлення" aria-label="Recipient's username" aria-describedby="button-addon2">
+							<div class="input-group-append">
+								<button class="py-3 px-4 chat__button" type="button" id="button-chat"><img src="img/enter.svg" alt="" class="chat__button-img"></button>
+							</div>
+						</div>
+					</form>
+					<div class="chat__window p-3">
+						<div class="chat__window-wrapper">
+							<!-- start message block -->
+							<div class="row mb-3 justify-content-start chat__message">
+								<p class="col mb-1 font-weight-bold chat__author" data-chat="author">Администратор</p>
+								<p class="col mb-0 text-center chat__date" data-chat="date">30.07.2018</p>
+								<p class="col-1 mb-0 text-center">&#47;</p>
+								<p class="col mb-0 text-center chat__time" data-chat="time">11:33:58</p>
+								<p class="col-12 chat__text" data-chat="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsam suscipit, quas id eius maiores corporis commodi dignissimos a natus?</p>
+							</div>
+							<!-- start message block -->
+							<div class="row mb-3 justify-content-start chat__message">
+								<p class="col mb-1 font-weight-bold chat__author" data-chat="author">Ви</p>
+								<p class="col mb-0 text-center chat__date" data-chat="date">30.06.2018</p>
+								<p class="col-1 mb-0 text-center">&#47;</p>
+								<p class="col mb-0 text-center chat__time" data-chat="time">12:47:12</p>
+								<p class="col-12 chat__text" data-chat="message">quas id eius maiores corporis commodi dignissimos a natus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsam suscipit, quas i</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 mb-3 pt-3 emergency-service__table-wrapper">
+					<p class="mb-3 font-weight-bold emergency-service__text">Заявки в роботі</p>
+					<table class="w-100 emergency-service__table js-table">
+						<!-- start table-header -->
+						<thead>
+							<tr class="row emergency-service__table-header">
+								<th class="col-12 col-sm-3 py-4 text-center font-weight-normal emergency-service__table-data">Дата/Час</th>
+								<th class="col-12 col-sm-3 py-4 text-center font-weight-normal emergency-service__table-data">Адреса</th>
+								<th class="col-12 col-sm-3 py-4 text-center font-weight-normal emergency-service__table-data">Категорія звернення</th>
+								<th class="col-12 col-sm-3 py-4 text-center font-weight-normal emergency-service__table-data">Статус</th>
+							</tr>
+						</thead>
+						<!-- end table-header -->
+						<tbody>
+							<!-- start row -->
+							<tr class="row emergency-service__table-row">
+								<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="date">10-07-2018 / 17:00:48</td>
+								<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="adress">Центральная, 57; Кв.15</td>
+								<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="damage">Сміття</td>
+								<td class="col-12 col-sm-3 py-3 text-center font-weight-bold emergency-service__table-data" data-emergency-table="completed">Закрита</td>
+							</tr>
+							<!-- end row -->
+							<!-- start row -->
+							<tr class="row emergency-service__table-row">
+								<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="date">10-07-2018 / 08:12:00</td>
+								<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="adress">Урицького, 47; Кв.98</td>
+								<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="damage">Холодне водопостачання</td>
+								<td class="col-12 col-sm-3 py-3 text-center font-weight-bold emergency-service__table-data" data-emergency-table="unchecked">Неперевірена</td>
+							</tr>
+							<!-- end row -->
+							<!-- start row -->
+							<tr class="row emergency-service__table-row">
+								<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="date">10-07-2018 / 00:37:12</td>
+								<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="adress">Київська, 130; Кв.202</td>
+								<td class="col-12 col-sm-3 py-3 text-center emergency-service__table-data" data-emergency-table="damage">ліфт</td>
+								<td class="col-12 col-sm-3 py-3 text-center font-weight-bold emergency-service__table-data" data-emergency-table="inProgress">Незакрита</td>
+							</tr>
+							<!-- end row -->
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-	<script src="js/slider.js"></script>
 	<script src="js/rating.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/common.js"></script>
 
 	<script>
-	$(function(){                   // Start when document ready
-    $('#star-rating').rating(); // Call the rating plugin
-  });
+		$('#topSlider').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 10000,
+			dots: true,
+			arrows: true,
+		});
+
+		$('.js-news').slick({
+			arrows: false,
+			infinite: true,
+			autoplay: true,
+			speed: 1000,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 3,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+			]
+		});
+		$(function(){                   // Start when document ready
+	    $('#star-rating').rating(); // Call the rating plugin
+	  });
 </script>
 </body>
 </html>
