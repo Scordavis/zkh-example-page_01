@@ -35,49 +35,6 @@ b, strong
 
 // custom classes
 
-// custom classes
-.bx-wrapper
-	margin-top:  1px
-
-
-#subj-pages-block
-	display: none
-	width: 70%
-	margin: 0 auto
-	background: rgba(255,255,255,0.6)
-	padding-bottom: 20px
-
-
-
-#name
-	color: brown
-	font-weight: bolder
-
-
-#one-comment
-	width: 100%
-	padding: 10px
-	margin-bottom: 10px
-	background: #fff
-
-#comment
-	padding: 10px
-
-#open-form a
-	color: blue
-	font-weight: bolder
-	cursor: pointer
-	padding: 20px
-
-
-#open-form a
-	&:hover
-		color: red
-		font-weight: bolder
-
-#error-comment
-	font-weight: bolder
-	color: red
 
 // reset-links
 .reset-link
@@ -102,6 +59,35 @@ button
 	&:visited
 		outline: none
 		cursor: pointer
+
+.block-heading
+	// position: relative
+	overflow: hidden
+	&--aside-lines
+		& span
+			display: inline-block
+			width: 100%
+			vertical-align: middle
+			&:before
+				content: ''
+				position: relative
+				display: inline-block
+				top: -8px
+				left: -14px
+				width: 100%
+				height: 3px
+				background-color: #e8e8e8
+				margin-left: -100%
+			&:after
+				content: ''
+				position: relative
+				display: inline-block
+				top: -8px
+				right: -14px
+				width: 100%
+				height: 3px
+				background-color: #e8e8e8
+				margin-right: -100%
 
 // @include transition(.2s)
 
@@ -555,6 +541,14 @@ button
 		display: block
 		width: 270px
 		height: auto
+		&--shadowed
+			width: 263px
+			height: 470px
+			background-color: #ffffff
+			box-shadow: 1px 4px 5px 2px rgba(0, 0, 0, 0.08)
+			@include transition(.3s)
+			&:hover
+				box-shadow: 4px 11px 5px 0px rgba(0, 0, 0, 0.08)
 
 	&__img
 		position: relative
@@ -573,10 +567,27 @@ button
 		&:hover
 			box-shadow: 0 4px 20px lighten(black, 40%)
 
+		&--h-200
+			height: 200px
+			&:hover
+				box-shadow: 0 0 0 transparent
+
+		&__ico
+			width: 20px
+			height: auto
+
 	&__title
 		font-size: 18px
+		line-height: 1.2
+		&--shadowed
+			font-size: 24px
 
 	&__description
+		&--shadowed
+			font-size: 16px
+			font-weight: light
+			line-height: 1.2
+
 	&__attribute
 		&--time
 			&:before
@@ -586,6 +597,7 @@ button
 			&:before
 				content: attr(data-popularity)
 				margin-right: 4px
+
 
 // .important-sections
 .important-sections
