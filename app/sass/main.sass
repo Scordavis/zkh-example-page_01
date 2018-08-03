@@ -88,6 +88,13 @@ button
 				height: 3px
 				background-color: #e8e8e8
 				margin-right: -100%
+	&__light
+		&--aside-lines
+			& span
+				&:before
+					background-color: #6f6f6f
+				&:after
+					background-color: #6f6f6f
 
 // @include transition(.2s)
 
@@ -180,9 +187,9 @@ button
 		align-self: stretch
 
 	&__background-image
-		background-size: cover
+		background-size: contain
 		background-position: 0 center
-		background-repeat: no-repeat
+		background-repeat: repeat-x
 		opacity: .5
 		&--wrapper
 			top: 0
@@ -604,31 +611,54 @@ button
 
 // .important-sections
 .important-sections
+	text-decoration: none
 	&:hover
 		text-decoration: none
+	&__wrapper
+		&--dark
+			background-color: #3f3f3f
 
 	&__card
 		width: 280px
 		box-shadow: 0 0px 0px lighten(black, 40%)
+		text-decoration: none
 		cursor: pointer
 		@include transition(.3s)
 		&:hover
 			box-shadow: 0 4px 20px lighten(black, 40%)
+			text-decoration: none
+
+		&--middle
+			height: 190px
+			min-height: 190px
+
+	&__img-wrapper
+		min-height: 99px
+		height: 99px
 
 	&__img
+		height: 80px
+		width: auto
 		font-size: 48px
 
 	&__text
 		font-size: 13px
+		&:hover
+			text-decoration: none
+
+		&--middle
+			height: 38px
+			min-height: 38px
 
 // .footer-page
 .footer-page
 	&__item
+	&__icon
+		max-width: 33px
 	&__text
 		font-size: 18px
 	&__nav
 		list-style-type: none
-
 
 	&__li
 		&:before
@@ -639,7 +669,6 @@ button
 			margin-right: 4px
 			font-size: 200%
 			line-height: 0
-
 
 	&__link
 		&:hover
