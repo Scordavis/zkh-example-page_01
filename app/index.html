@@ -34,7 +34,14 @@
 			box-shadow: 0px 0px 0px 4px #daa520;
 		}
 
+		.block-heading--aside-lines span:before, .block-heading--aside-lines span:after{
+			background-color: #edb636;
+		}
+
 		/*.theme-colors*/
+
+		/*text color*/
+
 		.theme__text--accent {
 			color: #edb636;
 		}
@@ -47,11 +54,20 @@
 		.theme__text--dark {
 			color: #555555;
 		}
+		.theme__text--black {
+			color: #000000;
+		}
 		.theme__text--light {
 			color: #ffffff;
 		}
+
+		/*background-colors*/
+
 		.theme__bg--accent {
 			background-color: #edb636;
+		}
+		.theme__bg--transparent {
+			background-color: transparent;
 		}
 		.theme__bg--danger {
 			background-color: #f33924;
@@ -62,9 +78,15 @@
 		.theme__bg--dark {
 			background-color: #555555;
 		}
+		.theme__bg--black {
+			background-color: #000000;
+		}
 		.theme__bg--light {
 			background-color: #ffffff;
 		}
+
+		/*hamburger border-color*/
+
 		.theme__rad--accent {
 			border-color: #edb636;
 		}
@@ -116,13 +138,14 @@
 		</div>
 	</header>
 	<!-- .navbar -->
-	<div class="row py-0 navbar">
-		<div class="position-absolute w-100 h-100">
+	<div class="navbar">
+		<div class="position-absolute w-100 h-100 navbar__background-image--wrapper">
 			<div class="offset-xl-4 offset-lg-3 h-100 navbar__background-image" style="background-image: url(img/bg/uzor1.png);"></div>
 		</div>
 		<div class="container-fluid navbar__container h-100">
 			<div class="d-flex col-9 col-sm-6 col-md-7 col-lg-3 h-100 py-2 align-items-center logo-company">
 				<img src="img/logo-company.png" class="img-fluid h-100 logo-company__self" alt="">
+				<div class="logo-company__shape theme__bg--light"></div>
 			</div>
 			<!-- site nav buttons desctop-->
 			<div class="col-lg-8 h-100 d-none d-lg-block col-7 col-xl-7 col-lg-6 col-md-4 nav__link-wrapper">
@@ -248,75 +271,66 @@
 	<div class="w-100 slider">
 		<div class="h-100 mb-0 slider__wrapper" id="topSlider">
 			<!-- slide-->
-			<div class="position-relative slide">
+			<div class="position-relative pb-5 slide slide--full">
+				<!-- image -->
 				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/snow.jpg);">
 				</div>
-				<div class="slide__content">
-					<!-- visible overlay  on desctop -->
-					<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
-					</svg>
-					<!-- visible overlay  on handler -->
-					<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
-					</svg>
-					<div class="container-fluid h-100">
-						<div class="row h-100">
-							<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
-								<h2 class="mb-2 pt-3 text-uppercase text-center text-lg-left slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0 </span>осіб</p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
+				<!-- slider shapes -->
+				<div class="slide__bg slide__bg--shapes h-100 w-100 position-absolute" style="background-image: url(img/bg-slider-shapes.png);">
+				</div>
+				<div class="mb-5 slide__content">
+					<div class="container h-100">
+						<div class="row h-100 mb-5">
+							<div class="offset-lg-7 offset-md-5 col-lg-5 col-md-7 h-100 pl-2 pl-md-0 py-4 slide__text text-center" >
+								<img src="img/bg-shaped.png" alt="" class="d-none d-md-block w-100 position-absolute slide__text--bg-shaped">
+								<h2 class="mb-2 pt-3 text-uppercase text-left slide__text-heading theme__text--light">Послуги:<span class="d-block slide__text-heading--smaller theme__text--black">водопостачання та водовідведення</span></h2>
+								<p class="mb-0 text-left slide__text-description theme__text--black">Рік заснування підприємства: <wbr></wbr> <span class="ml-2 text-normal slide__text-description theme__text--light">2017</span></p>
+								<p class="mb-0 text-left slide__text-description theme__text--black">Кількість співробітників: <wbr></wbr> <span class="ml-2 mr-1 slide__text-description theme__text--light">0 осіб</span></p>
+								<p class="mb-0 text-left slide__text-description theme__text--black">Кількість абонентів: <wbr></wbr> <span class="ml-2 mr-1 slide__text-description theme__text--light">1265</span></p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- slide-->
-			<div class="position-relative slide">
+			<div class="position-relative pb-5 slide slide--full">
+				<!-- image -->
+				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/teplo2.jpg">
+				</div>
+				<!-- slider shapes -->
+				<div class="slide__bg slide__bg--shapes h-100 w-100 position-absolute" style="background-image: url(img/bg-slider-shapes.png);">
+				</div>
+				<div class="mb-5 slide__content">
+					<div class="container h-100">
+						<div class="row h-100 mb-5">
+							<div class="offset-lg-7 offset-md-5 col-lg-5 col-md-7 h-100 pl-2 pl-md-0 py-4 slide__text text-center" >
+								<img src="img/bg-shaped.png" alt="" class="d-none d-md-block w-100 position-absolute slide__text--bg-shaped">
+								<h2 class="mb-2 pt-3 text-uppercase text-left slide__text-heading theme__text--light">Послуги:<span class="d-block slide__text-heading--smaller theme__text--black">водопостачання та водовідведення</span></h2>
+								<p class="mb-0 text-left slide__text-description theme__text--black">Рік заснування підприємства: <wbr></wbr> <span class="ml-2 text-normal slide__text-description theme__text--light">2017</span></p>
+								<p class="mb-0 text-left slide__text-description theme__text--black">Кількість співробітників: <wbr></wbr> <span class="ml-2 mr-1 slide__text-description theme__text--light">0 осіб</span></p>
+								<p class="mb-0 text-left slide__text-description theme__text--black">Кількість абонентів: <wbr></wbr> <span class="ml-2 mr-1 slide__text-description theme__text--light">1265</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- slide-->
+			<div class="position-relative pb-5 slide slide--full">
+				<!-- image -->
 				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/water.jpg);">
 				</div>
-				<div class="slide__content">
-					<!-- visible overlay  on desctop -->
-					<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
-					</svg>
-					<!-- visible overlay  on handler -->
-					<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
-					</svg>
-					<div class="container-fluid h-100">
-						<div class="row h-100">
-							<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
-								<h2 class="mb-2 pt-3 text-uppercase text-center text-lg-left slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0 </span>осіб</p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
-							</div>
-						</div>
-					</div>
+				<!-- slider shapes -->
+				<div class="slide__bg slide__bg--shapes h-100 w-100 position-absolute" style="background-image: url(img/bg-slider-shapes.png);">
 				</div>
-			</div>
-			<!-- slide-->
-			<div class="position-relative slide">
-				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/snow.jpg);">
-				</div>
-				<div class="slide__content">
-					<!-- visible overlay  on desctop -->
-					<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
-					</svg>
-					<!-- visible overlay  on handler -->
-					<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
-					</svg>
-					<div class="container-fluid h-100">
-						<div class="row h-100">
-							<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
-								<h2 class="mb-2 pt-3 text-uppercase text-center text-lg-left slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0 </span>осіб</p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
+				<div class="mb-5 slide__content">
+					<div class="container h-100">
+						<div class="row h-100 mb-5">
+							<div class="offset-lg-7 offset-md-5 col-lg-5 col-md-7 h-100 pl-2 pl-md-0 py-4 slide__text text-center" >
+								<img src="img/bg-shaped.png" alt="" class="d-none d-md-block w-100 position-absolute slide__text--bg-shaped">
+								<h2 class="mb-2 pt-3 text-uppercase text-left slide__text-heading theme__text--light">Послуги:<span class="d-block slide__text-heading--smaller theme__text--black">водопостачання та водовідведення</span></h2>
+								<p class="mb-0 text-left slide__text-description theme__text--black">Рік заснування підприємства: <wbr></wbr> <span class="ml-2 text-normal slide__text-description theme__text--light">2017</span></p>
+								<p class="mb-0 text-left slide__text-description theme__text--black">Кількість співробітників: <wbr></wbr> <span class="ml-2 mr-1 slide__text-description theme__text--light">0 осіб</span></p>
+								<p class="mb-0 text-left slide__text-description theme__text--black">Кількість абонентів: <wbr></wbr> <span class="ml-2 mr-1 slide__text-description theme__text--light">1265</span></p>
 							</div>
 						</div>
 					</div>
