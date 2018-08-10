@@ -16,6 +16,8 @@
 		&__wrapper
 		&__item
 			&--logo
+			&--logo-shape
+				left: 10px
 
 		&__icon
 		&__emergency
@@ -35,6 +37,12 @@
 
 		&__shape
 			right: -40px
+
+	.nav
+		&__link
+			&:after
+				right: -1.7vw
+
 
 	.slide
 		&__overlay
@@ -70,6 +78,19 @@
 		&__self
 			max-width: 400px
 
+	// header-page
+	.header-page
+		&__bg
+			background-position: 100% 100%
+
+	.nav
+		&__item
+			margin-right: 5vw
+
+		&__link
+			&:after
+				right: -3.6vw
+
 	.navbar
 		&__background-image
 			display: none
@@ -94,10 +115,24 @@
 
 // ≥768px
 @media (max-width: 767.98px)
+	// .header-page
+	.header-page
+		height: auto
+
+	.nav
+		&__link
+			&:after
+				display: none
+
+		&__item
+			margin-right: 0
+
 	.emergency-service
 		&__table-header
 			display: none
+
 		&__phone
+
 	.emergency-service tbody .emergency-service__table-data
 		display: block
 		&:first-child
@@ -109,6 +144,7 @@
 			display: block
 			text-align: center
 			width: 100%
+
 	.slide
 		&__text-heading
 			height: 14vw

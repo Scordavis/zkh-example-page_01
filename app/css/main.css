@@ -186,6 +186,7 @@ button {
   position: relative;
   min-height: 70px;
   height: 70px;
+  overflow-x: hidden;
   color: white;
   font-size: 18px;
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
@@ -195,7 +196,7 @@ button {
     position: absolute;
     display: block;
     width: 100%;
-    height: 100%;
+    height: 120%;
     top: 0;
     right: 0;
     bottom: 0;
@@ -238,7 +239,7 @@ button {
 
 .navbar {
   min-height: 130px;
-  height: 130px; }
+  height: auto; }
   .navbar__container {
     -webkit-align-self: stretch;
         -ms-flex-item-align: stretch;
@@ -277,7 +278,7 @@ button {
     text-transform: uppercase;
     list-style-position: inside;
     list-style-type: none;
-    text-shadow: white -1px -1px 9px, white 1px 1px 9px, white 1px 0 9px,	white 0 1px 9px, white -2px -2px 9px, white 2px 2px 9px, white 2px 0 9px, white 0 2px 9px;
+    font-size: 18px;
     opacity: 1;
     -o-transition: 0.2s;
     -webkit-transition: 0.2s;
@@ -333,7 +334,7 @@ button {
   position: relative;
   width: 40px;
   height: 40px;
-  border-width: 3px;
+  border-width: 0px;
   border-style: solid;
   -webkit-border-radius: 40px;
           border-radius: 40px;
@@ -352,9 +353,14 @@ button {
   .hamburger__bar {
     display: block;
     width: 22px;
-    height: 2px;
+    height: 4px;
     -webkit-border-radius: 1px;
             border-radius: 1px; }
+
+.nav__item {
+  margin-right: 2.6vw; }
+  .nav__item:last-child {
+    margin-right: 0; }
 
 .nav__bg {
   position: absolute;
@@ -732,6 +738,8 @@ button {
 @media (max-width: 1199.98px) {
   body {
     font-size: 14px; }
+  .header-page__item--logo-shape {
+    left: 10px; }
   .header-page__text--logo-title {
     font-size: 20px;
     line-height: 1.2; }
@@ -741,6 +749,8 @@ button {
     max-width: 100%; }
   .logo-company__shape {
     right: -40px; }
+  .nav__link:after {
+    right: -1.7vw; }
   .news__card {
     width: auto; }
   .important-sections__card {
@@ -758,6 +768,12 @@ button {
     display: none; }
   .logo-company__self {
     max-width: 400px; }
+  .header-page__bg {
+    background-position: 100% 100%; }
+  .nav__item {
+    margin-right: 5vw; }
+  .nav__link:after {
+    right: -3.6vw; }
   .navbar__background-image {
     display: none; }
   .footer-page__text--responsive {
@@ -770,6 +786,12 @@ button {
     background-position: -700px 100%; } }
 
 @media (max-width: 767.98px) {
+  .header-page {
+    height: auto; }
+  .nav__link:after {
+    display: none; }
+  .nav__item {
+    margin-right: 0; }
   .emergency-service__table-header {
     display: none; }
   .emergency-service tbody .emergency-service__table-data {
