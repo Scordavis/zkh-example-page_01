@@ -230,10 +230,11 @@ button {
     .header-page__text--bigger {
       font-weight: bold; }
     .header-page__text--logo-title {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: bold;
-      line-height: 1.2; }
+      line-height: 1; }
     .header-page__text--logo-description {
+      font-size: 16px;
       text-transform: lowercase;
       font-weight: normal; }
 
