@@ -185,9 +185,38 @@ button {
 .header-page {
   position: relative;
   min-height: 70px;
+  height: 70px;
   color: white;
   font-size: 18px;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
   z-index: 8; }
+  .header-page__bg {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    opacity: .25; }
+  .header-page__item--logo-wrapper {
+    overflow: hidden; }
+  .header-page__item--logo-shape {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 800px;
+    height: 200px;
+    background-color: #fff;
+    -webkit-transform: skewX(-20deg);
+        -ms-transform: skewX(-20deg);
+            transform: skewX(-20deg); }
   .header-page__item--logo {
     max-width: 60px; }
   .header-page__emergency {
@@ -208,8 +237,8 @@ button {
       font-weight: normal; }
 
 .navbar {
-  min-height: 80px;
-  height: 80px; }
+  min-height: 130px;
+  height: 130px; }
   .navbar__container {
     -webkit-align-self: stretch;
         -ms-flex-item-align: stretch;
@@ -243,6 +272,7 @@ button {
   position: relative;
   width: 100%; }
   .nav-dropdown__button {
+    position: relative;
     font-weight: bold;
     text-transform: uppercase;
     list-style-position: inside;
@@ -326,6 +356,35 @@ button {
     -webkit-border-radius: 1px;
             border-radius: 1px; }
 
+.nav__bg {
+  position: absolute;
+  display: block;
+  width: 96%;
+  height: 70%;
+  top: 15%;
+  right: 2%;
+  bottom: 15%;
+  left: 2%;
+  -webkit-transform: skewX(-30deg);
+      -ms-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+  -webkit-box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.15); }
+
+.nav__link:after {
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  right: -1.6vw;
+  content: '\/';
+  margin-left: 1vw;
+  font-size: 14px;
+  color: red;
+  line-height: 0; }
+
+.nav__link:last-child:after {
+  display: none; }
+
 .nav__link-wrapper {
   z-index: 10; }
   .nav__link-wrapper--mobile {
@@ -338,20 +397,9 @@ button {
   position: relative;
   background-color: white;
   z-index: 2; }
-  .logo-company:after {
-    position: absolute;
-    display: block;
-    content: '';
-    height: 360px;
-    width: 360px;
-    right: -220px;
-    background-color: inherit;
-    -webkit-transform: rotate(25deg);
-        -ms-transform: rotate(25deg);
-            transform: rotate(25deg);
-    z-index: 1; }
   .logo-company__self {
-    z-index: 10; }
+    z-index: 10;
+    max-width: 400px; }
   .logo-company__shape {
     position: absolute;
     width: 300px;
@@ -689,6 +737,8 @@ button {
     line-height: 1.2; }
   .header-page__text--logo-description {
     font-size: 14px; }
+  .logo-company__self {
+    max-width: 100%; }
   .logo-company__shape {
     right: -40px; }
   .news__card {
@@ -706,6 +756,8 @@ button {
 @media (max-width: 991.98px) {
   .logo-company:after {
     display: none; }
+  .logo-company__self {
+    max-width: 400px; }
   .navbar__background-image {
     display: none; }
   .footer-page__text--responsive {
@@ -751,6 +803,8 @@ button {
       display: block;
       text-align: center;
       width: 100%; }
+  .logo-company__self {
+    max-width: 100%; }
   .slide__text-heading {
     height: 17vw;
     line-height: 1.2; }
