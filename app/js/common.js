@@ -10,11 +10,13 @@ $(function() {
     $('.nav-dropdown__content').hide(100)
   });
 
-  $('.js-dropdown-form').click(function() {
-  	$('.nav-dropdown__content--form').toggle();
-	});
 
   // navbar hamburger
+
+    $('.nav__item--mobile').click(function() {
+      $( this ).addClass('theme__bg--accent');
+      $( this ).removeClass('theme__bg--black');
+  });
 
     $('.hamburger').click(function() {
 	  	$('.js-navbar').toggleClass('nav-show');

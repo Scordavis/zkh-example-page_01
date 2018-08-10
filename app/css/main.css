@@ -295,9 +295,6 @@ button {
     right: 0;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #0051a3;
-    -webkit-box-shadow: 0px 2px 8px rgba(96, 96, 96, 0.6);
-            box-shadow: 0px 2px 8px rgba(96, 96, 96, 0.6);
     z-index: 6; }
     .nav-dropdown__content--mobile {
       position: relative; }
@@ -361,6 +358,9 @@ button {
   margin-right: 2.6vw; }
   .nav__item:last-child {
     margin-right: 0; }
+  .nav__item--mobile {
+    margin-right: 1px;
+    margin-bottom: 1px; }
 
 .nav__bg {
   position: absolute;
@@ -394,7 +394,9 @@ button {
 .nav__link-wrapper {
   z-index: 10; }
   .nav__link-wrapper--mobile {
-    display: none; }
+    display: none;
+    position: absolute;
+    top: 116px; }
 
 .nav-show {
   display: block; }
@@ -794,6 +796,8 @@ button {
     margin-right: 0; }
   .emergency-service__table-header {
     display: none; }
+  .nav-dropdown__content {
+    min-width: unset; }
   .emergency-service tbody .emergency-service__table-data {
     display: block; }
     .emergency-service tbody .emergency-service__table-data:first-child {
