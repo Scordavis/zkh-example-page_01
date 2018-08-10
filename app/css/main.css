@@ -708,6 +708,25 @@ button {
       height: 38px;
       min-height: 38px; }
 
+.managment {
+  min-height: 55vh;
+  background-position: 0 100%;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat; }
+  .managment__item {
+    -webkit-box-shadow: 1.368px 3.759px 5px 0px rgba(0, 0, 0, 0.08);
+            box-shadow: 1.368px 3.759px 5px 0px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e0e0; }
+  .managment__info {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1; }
+  .managment__post {
+    font-size: 24px; }
+  .managment__name {
+    font-size: 48px; }
+
 .footer-page__icon {
   max-width: 33px; }
 
