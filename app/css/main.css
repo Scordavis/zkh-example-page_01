@@ -823,7 +823,7 @@ button {
   .nav__item {
     margin-right: 5vw; }
   .nav__link:after {
-    right: -3.6vw; }
+    display: none; }
   .navbar__background-image {
     display: none; }
   .footer-page__text--responsive {
