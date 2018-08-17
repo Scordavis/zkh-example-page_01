@@ -745,6 +745,12 @@ button {
     -webkit-box-shadow: 1.368px 3.759px 5px 0px rgba(0, 0, 0, 0.08);
             box-shadow: 1.368px 3.759px 5px 0px rgba(0, 0, 0, 0.08);
     border: 1px solid #e1e0e0; }
+  .managment__photo {
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 200px; }
   .managment__info {
     font-size: 18px;
     font-weight: 500;
